@@ -1,20 +1,25 @@
 package Process;
 
 public class Process {
-    int id;
     private int burstTime;
     private int arrivalTime;
-    int waitingTime;
+    private int waitingTime=0;
 
-    public Process(int id, int burstTime, int arrivalTime) {
-        this.id = id;
+    public Process( int burstTime, int arrivalTime) {
         this.burstTime = burstTime;
         this.arrivalTime = arrivalTime;
-        this.waitingTime = 0;
     }
+
 
     public int getBurstTime() {
         return burstTime;
+    }
+    public void setWaitingTime(int waitingTime){
+        this.waitingTime=waitingTime;
+    }
+
+    public int getWaitingTime(){
+        return this.waitingTime;
     }
 
     public void setBurstTime(int burstTime) {
